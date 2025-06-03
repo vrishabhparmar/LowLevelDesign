@@ -67,6 +67,44 @@ One of the main use case of chaining constructor is duplicate code while having 
 
 ## Access Specifiers 
 
+#### Type of Access Specifiers
+
+&rarr; Default: Cannot be accessed outside the package.  
+&rarr; Public: Can be accessed outside the package  
+&rarr; Private: Only access inside the class  
+&rarr; Protected
+
+## Four pillars of OOPs
+
+### Encapsulation  
+&rarr; Reduce complexity + Data Security  
+
+        It helpes to bind the data and related methods into single unit. It also keeps the data and methods safe from th external interface. 
+        a.k.a Data hiding. There is no side effects of this code on the rest of the application.
+Encapsulation and data hiding are not same. Encapsulation unables Data hinding. 
+Data hiding is achieved using Access Modifiers. 
+
+### Steps for Proper Encapsulation 
+
+&rarr; Restrict Access  
+&rarr; Know the bounds of values (i.e. donot allow negactive balance)  
+&rarr; Initilize data elements to right initial values  
+&rarr; Choose data types wisely  
+&rarr; Validate the input while modifying / setting data 
+
+
+### Abstraction 
+&rarr; Hide complexity + Isolate impact of changes  
+
+
+### Inheritance
+&rarr; Eliminate Redundant code + reusability
+
+### Polymorphism 
+&rarr; Ability to take many forms
+
+
+
 
 
 
