@@ -71,8 +71,8 @@ One of the main use case of chaining constructor is duplicate code while having 
 
 &rarr; Default: Cannot be accessed outside the package.  
 &rarr; Public: Can be accessed outside the package  
-&rarr; Private: Only access inside the class  
-&rarr; Protected
+&rarr; Private: Only access inside the class. Not even child class can access it. If you want yoour child class to access it you need to set it as protected  
+&rarr; Protected: It allows you to access with in the module but not outside the module. But if you still want to access the memeber then you need to extend that class as a parent class. 
 
 ## Four pillars of OOPs
 
@@ -96,12 +96,53 @@ Data hiding is achieved using Access Modifiers.
 ### Abstraction 
 &rarr; Hide complexity + Isolate impact of changes  
 
-
 ### Inheritance
 &rarr; Eliminate Redundant code + reusability
 
+        Inheritance is a mechanism in which one object (child object) acquires all the properties of the parent class.
+        It is an important part of the object oriented programming. 
+
+Inheritance represents the IS-A relationship which is also known as a parent child relationship
+
+#### Types of Inheritance
+&rarr; Single level  
+&rarr; Multi-level  
+&rarr; Hierarchical 
+
+        "Final" keyword. A methods once written cannot be override it. 
+
 ### Polymorphism 
 &rarr; Ability to take many forms
+
+#### Type of polymorphism 
+
+&rarr; Static polymorphism: Also known as Compile time polymorphism. Method overloading.  
+        
+&rarr; Dynamic polymorphism: Also known as runtime polymorphism. Method overriding.   
+
+#### Method Overloading
+
+&rarr; Multiple methods having same name but different parameters.  
+&rarr; A class can hold several methods having same name.  
+
+
+#### Three ways to overload methods:
+
+&rarr; By changing the number of arguments  
+&rarr; By changing the data types of the argument.  
+&rarr; by changing the order of the argument  
+
+#### Method Overridding 
+
+&rarr; Only inherited methods can be overridden  
+&rarr; The overridden methods must have same argument list  
+&rarr; The overridden method must have same return type.  
+
+    The overriding method must not have more restrictive access modifier. If the overridden methods has a default access, then the overriding one must be 
+    default, protected or public. If the overidden method is protected, then the overriding one must be protected or public. 
+    If the overridden methods is public, then the overriding method must be public. 
+
+
 
 
 
