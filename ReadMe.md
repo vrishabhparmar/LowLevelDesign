@@ -94,7 +94,34 @@ Data hiding is achieved using Access Modifiers.
 
 
 ### Abstraction 
-&rarr; Hide complexity + Isolate impact of changes  
+&rarr; Hide complexity + Isolate impact of changes 
+
+        Abstraction hides the implementation or complexity and exposes only relavant functionality to the User. End user focus is on what the object does instead of how it does.
+        It can be achieved using access specifiers but there are other ways also to achieve it. 
+
+#### Abstraction vs Encapsulation 
+
+Grouping the behavior and data in a single logical unit and enable data hiding to protect the access of the data from the outside world is called encapsulation while hiding the complex implementation details from clients is called Abstraction.
+
+#### Ways to achieve Abstraction 
+
+&rarr; By use of private access specifiers  
+&rarr; Abstract classes  (0 to 100%)
+&rarr; Interfaces (100%)
+
+#### Abstract class:
+
+An abstract class is a class that is declared abstract - it may or may not include abstract methods. Abstract classes cannot be instantiated ,but they can be subclassed. 
+
+When an abstract class is subclassed, the subclass usually provides implementations for all the abstract methods in its parent class. However, if it does not, then the subclass must not be declared abstract. 
+
+#### Abstract method
+
+An abstact methods is a method which is declared without any implementation. 
+
+### Interface 
+
+        A interface is a contract which specifies what a class must do. Any class implementing the interface my implement this methods
 
 ### Inheritance
 &rarr; Eliminate Redundant code + reusability
@@ -143,7 +170,7 @@ Inheritance represents the IS-A relationship which is also known as a parent chi
     If the overridden methods is public, then the overriding method must be public. 
 
 
-
+ 
 
 
 
