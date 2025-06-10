@@ -209,6 +209,8 @@ Inheritance represents the IS-A relationship which is also known as a parent chi
         Abstraction should not depend of details. Details should depend on abstraction. 
 
 
+## Object and Relations
+
 
 
 
