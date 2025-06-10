@@ -169,6 +169,49 @@ Inheritance represents the IS-A relationship which is also known as a parent chi
     default, protected or public. If the overidden method is protected, then the overriding one must be protected or public. 
     If the overridden methods is public, then the overriding method must be public. 
 
+## Solid Principles
+
+&rarr; S: Single responsibility principle  
+&rarr; O: Open close principle  
+&rarr; L: Liskov substitution principle  
+&rarr; I: Interface segregation principle  
+&rarr; D: Dependency inversion principle 
+
+### Why solid principles? 
+
+&rarr; Maintainability  
+&rarr; Preserve good design   
+&rarr; Loose coupling  
+&rarr; Reusability   
+&rarr; Testability  
+
+## Single Responsibility Principle 
+
+        A class should have one, and only one, reason to change.
+
+## Interface segregation principle
+
+        Clients should not be forced to depend on interface that they do not use
+
+## Open close principle (open for extention , close for modification )
+
+        Software entities (classes, modules, functions) should be open for extention, but close for modification. 
+
+## Liskov Substitution principle 
+
+        According to this principle, if you are inhereting any class then it should consist of all the functionality of the super class
+        and it can also contain additional functionality. It should not exclude the methods of super class. Whenever using inheritence
+        youf should be always carefull if it is needed for sure.
+
+## Dependency Inversion Principle
+
+        High level modules should not depend on low level modules. Both should be dependent on Interfaces or abstraction.
+        Abstraction should not depend of details. Details should depend on abstraction. 
+
+
+
+
+
 
  
 
