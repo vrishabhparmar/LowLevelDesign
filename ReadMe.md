@@ -197,19 +197,41 @@ Inheritance represents the IS-A relationship which is also known as a parent chi
 
         Software entities (classes, modules, functions) should be open for extention, but close for modification. 
 
+Rules to be careful about when applying OCP
+1. Try to avoid inheritance as it introduces tight coupling - if the superclass changes =, subclasses may need to be modified, too.
+2. Use abstraction (interface) to enable you to adapt the functionality of your application without changing the existing code.
+
+
 ## Liskov Substitution principle 
 
         According to this principle, if you are inhereting any class then it should consist of all the functionality of the super class
         and it can also contain additional functionality. It should not exclude the methods of super class. Whenever using inheritence
-        youf should be always carefull if it is needed for sure.
+        you should be always carefull if it is needed for sure.
 
 ## Dependency Inversion Principle
 
         High level modules should not depend on low level modules. Both should be dependent on Interfaces or abstraction.
-        Abstraction should not depend of details. Details should depend on abstraction. 
+        Abstraction should not depend on details. Details should depend on abstraction. 
 
 
-## Objects
+## Objects & Relationships 
+
+### Types of Object Relationships
+
+1. IS-A relationships
+
+2. HAS-A relationships
+    1. Aggregation: Single owner & have their own lifetime & Child objects belong to single parent 
+         Ex. Manager has many workers working under him (Employee -- has-a---> (Workers)
+    2. Composition: Single owner & Owners life & Child objects belong to single parent
+         Ex. Manager has the responsibility of ensuring the project success. (Manager <---has a ----> Project)
+
+3. USES-A relationships
+    1. Association 
+         No Owner & Have their own lifetime & No child objects all are independent
+         ex. Employee uses a swipe card by which he enters the building (Employee ---uses-a---> Swipe)
+
+## Relationships & cardinality
 
 
 
