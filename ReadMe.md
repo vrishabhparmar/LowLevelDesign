@@ -234,6 +234,11 @@ Rules to be careful about when applying OCP
 ## Relationships & cardinality
 
 
+## Factory Method
+
+## Singleton Method
+
+
 
 
 
