@@ -236,6 +236,46 @@ Rules to be careful about when applying OCP
 
 ## Factory Method
 
+    Factory method is a creational design pattern that provides an interface for creating objects  in the superclass 
+    but allows subclasses to alter  the type of  objects that will be created. 
+
+    The Factory Method Design Pattern is a creational design pattern used in software development. It provides an interface for creating objects in a superclass while allowing subclasses to specify the types of objects they create.
+
+This pattern simplifies the object creation process by placing it in a dedicated method, promoting loose coupling between the object creator and the objects themselves.
+This approach enhances flexibility, extensibility, and maintainability, enabling subclasses to implement their own factory methods for creating specific object types.
+
+### When to use Factory Design Pattern 
+
+- If your object creation process is complex or varies under different conditions, 
+using a factory method can make your client code simpler and promote reusability.
+
+- The Factory Method Pattern allows you to create objects through an interface or abstract class, 
+hiding the details of concrete implementations. 
+This reduces dependencies and makes it easier to modify or expand the system without affecting existing code.
+
+- If your application needs to create different versions of a product or may introduce new types in the future, 
+the Factory Method Pattern provides a flexible way to handle these variations by defining specific factory methods 
+for each product type.
+
+- Factories can also encapsulate configuration logic, allowing clients to customize the object creation process 
+by providing parameters or options to the factory method.
+
+### Components of Factory method
+
+1. Creator: This is an abstract class or an interface that declares the factory method. 
+    The creator typically contains a method that serves as a factory for creating objects. 
+    It may also contain other methods that work with the created objects.
+
+2. Concrete Creator: Concrete Creator classes are subclasses of the Creator that implement the factory method to create specific types of objects. 
+Each Concrete Creator is responsible for creating a particular product.
+
+3. Product: This is the interface or abstract class for the objects that the factory method creates. 
+The Product defines the common interface for all objects that the factory method can create.
+
+4. Concrete Products: Concrete Product classes are the actual objects that the factory method creates. 
+Each Concrete Product class implements the Product interface or extends the Product abstract class.
+
+
 ## Singleton Method
 
 
