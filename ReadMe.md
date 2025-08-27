@@ -278,17 +278,120 @@ Each Concrete Product class implements the Product interface or extends the Prod
 
 ## Singleton Method
 
+Singleton pattern is a design pattern which restricts a class to instantiate its multiple objects. 
+It is nothing but a way of defining a class. Class is defined in such a way that only one instance of the class is 
+created in the complete execution of a program or project. 
+
+### When to use Singleton class 
+
+1. Logging service: For a logging service that needs to capture and centralize log entries across the entire application,
+a Singleton can ensure that there's only one logging instance.
+
+2. Managing Shared resources:  In scenarios where you need to manage shared resources like database connections, network connections, or thread pools, 
+a Singleton can help coordinate and control access to these resources. 
+
+3. Service class: For services that should have a single instance, such as a data service,
+API service, or utility service, a Singleton pattern can provide a consistent interface.
+
+4. Preventing multiple instances: When instantiating multiple instances of a class would cause issues or inefficiencies, 
+a Singleton ensures that there is only one instance in the entire application.
+
+5. Lazy Initialization: If the instantiation of an object is resource-intensive, and you want to delay 
+the creation until it is actually needed, a Singleton can provide lazy initialization.
+
+6. Preventing Cloning: If you want to prevent the cloning of an object, which could lead to multiple instances, 
+a Singleton can include logic to prohibit cloning.
+
+```Java
+
+package singletonmethod;
+
+public class SingletonMethod {
+
+    public static volatile SingletonMethod instance = null;
+    private String data;
+    /*
+    * Private constructor so no outside class can create new Singleton instance*/
+    private SingletonMethod(String data)
+    {
+        this.data = data;
+    }
+
+    public static SingletonMethod getInstance(String data)
+    {
+        if(instance == null)
+        {
+            synchronized (SingletonMethod.class)
+            {
+                if(instance == null)
+                {
+                    return new SingletonMethod(data);
+                }
+            }
+        }
+        return instance;
+    }
 
 
+}
 
 
- 
+```
+
+Important takeaways:
+
+Use of double check locks and use of volatile keyword. 
+
+The pattern involves two checks for a condition, such as whether an instance is null. The first check is performed without acquiring a lock; if the condition is true, the thread acquires a lock and performs a second check within a synchronized block before proceeding with the initialization.
+This approach aims to avoid the performance cost of synchronizing every method call, which is necessary in a fully synchronized method but only required during the initial creation of the object.
+
+However, the original form of the pattern is prone to data races and can be unsafe on many programming languages and hardware platforms due to issues with memory visibility and reordering of instructions.
+For example, in Java prior to version 5, the pattern was broken because the volatile keyword was not defined to create a memory barrier, which is necessary to prevent a thread from seeing a partially constructed object.
+The pattern can be made correct in Java by declaring the instance variable as volatile, which ensures that changes to the variable are immediately visible to other threads and prevents the compiler from reordering instructions in a way that could lead to a partially constructed object being referenced.
 
 
+## Strategy Behavior Pattern
+
+        Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable
+
+This pattern is useful when you want to dynamically change the behavior of a class without modifying its code.
 
 
+### Characteristics of this design pattern
+
+- Defines a family of algorithms: The pattern allows you to encapsulate multiple algorithms or behaviors into separate classes, known as strategies.
+- Encapsulates behaviors: Each strategy encapsulates a specific behavior or algorithm, providing a clean and modular way to manage different variations or implementations.
+- Enables dynamic behavior switching: The pattern enables clients to switch between different strategies at runtime, allowing for flexible and dynamic behavior changes.
+- Promotes object collaboration: The pattern encourages collaboration between a context object and strategy objects, where the context delegates the execution of a behavior to a strategy object
+
+### Components of Strategy Design Pattern
+
+- Strategy: (Interface)
+  An abstract class or interface known as the Strategy Interface specifies a set of methods that all concrete strategies must implement.
+
+As a kind of agreement, it guarantees that all strategies follow the same set of rules and are interchangeable by the Context.
+The Strategy Interface promotes flexibility and modularity in the design by establishing a common interface that enables decoupling between the Context and the specific strategies.
+
+- Concrete Strategies: (In this case, MergeSortStrategy and BubbleSortStrategy)
+  Concrete Strategies are the various implementations of the Strategy Interface. Each concrete strategy provides a specific algorithm or behavior for performing the task defined by the Strategy Interface.
+
+Concrete strategies encapsulate the details of their respective algorithms and provide a method for executing the task.
+They are interchangeable and can be selected and configured by the client based on the requirements of the task.
+
+- Context: (Sorting Context in this case)
+A class or object known as the Context assigns the task to a strategy object and contains a reference to it.
+
+It serves as an intermediary between the client and the strategy, offering an integrated approach for task execution without exposing every detail of the process.
+The Context maintains a reference to a strategy object and calls its methods to perform the task, allowing for interchangeable strategies to be used.
+
+- Client:
+  The Client is responsible for selecting and configuring the appropriate strategy and providing it to the Context.
+
+It knows the requirements of the task and decides which strategy to use based on those requirements.
+The client creates an instance of the desired concrete strategy and passes it to the Context, enabling the Context to use the selected strategy to perform the task.
 
 
+## Command Design Pattern
 
 
 

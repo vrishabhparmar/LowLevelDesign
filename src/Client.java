@@ -1,5 +1,5 @@
-import factorydesignpattern.Vehicle;
-import factorydesignpattern.VehicleFactory;
+import patterns.factorydesignpattern.Vehicle;
+import patterns.factorydesignpattern.VehicleFactory;
 
 public class Client {
 

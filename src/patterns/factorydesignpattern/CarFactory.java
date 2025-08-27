@@ -1,4 +1,4 @@
-package factorydesignpattern;
+package patterns.factorydesignpattern;
 
 public class CarFactory implements VehicleFactory{
     @Override

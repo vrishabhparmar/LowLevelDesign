@@ -1,7 +1,8 @@
-import factorydesignpattern.BikeFactory;
-import factorydesignpattern.CarFactory;
-import factorydesignpattern.Vehicle;
-import factorydesignpattern.VehicleFactory;
+import patterns.factorydesignpattern.BikeFactory;
+import patterns.factorydesignpattern.CarFactory;
+import patterns.factorydesignpattern.Vehicle;
+import patterns.factorydesignpattern.VehicleFactory;
+import singletonmethod.SingletonMethod;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -19,7 +20,6 @@ public class Main {
         Vehicle car = carClient.getVehicle();
         System.out.println(car.type());
 
-
-
+        System.out.println(SingletonMethod.getInstance("Java"));
     }
 }
